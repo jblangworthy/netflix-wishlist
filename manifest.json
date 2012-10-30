@@ -1,0 +1,20 @@
+{
+  "name": "NetFlix Wishes",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Add Netflix Instant movies to a wish list.",
+  "background": { "scripts": ["jquery-1.8.2.min.js","base.js","contextMenu.js","storage.js"] },
+  "content_scripts": [
+    {
+      "matches": ["*://movies.netflix.com/*"],
+      "css": ["styles.css"],
+      "js": ["base.js","jquery-1.8.2.min.js", "content.js"]
+    }
+  ],
+  "permissions": [
+  	"contextMenus",
+  	"storage",
+  	"tabs",
+  	"*://movies.netflix.com/*"
+  ]
+}
